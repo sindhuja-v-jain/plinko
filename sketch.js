@@ -72,6 +72,7 @@ function draw() {
   }
 }
 
-function mousePressed(){
+function touchStarted(){
+  console.log(touches)
   particles.push(new Particle(touches[0][0],touches[0][1], 10))
 }
