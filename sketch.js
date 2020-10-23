@@ -5,14 +5,14 @@ const Bodies = Matter.Bodies;
 var plinkos=[];
 var particles=[];
 var divisions =[];
-var divisionHeight=320;
+var divisionHeight;
 function setup() {
-  createCanvas(480,800);
+  createCanvas(windowWidth,windowHeight);
   engine = Engine.create()
   world = engine.world;
-  ground = new Ground(240 , 790 , 480 , 10)
-
-  for ( var k= 0; k<=width; k=k+80){
+  ground = new Ground(width/2 , height-10 , width , 10)
+  divisionHeight=height/3;
+  for ( var k= 0; k<=width; k=k+width/6){
     divisions.push(new Ground(k, height-divisionHeight/2-15,10, divisionHeight))
   }
   for(var j =40; j<=width;  j=j+50 )
@@ -47,8 +47,10 @@ function setup() {
   {
    plinkos.push( new Plinko(j , 425))
   }
-
-
+  for(var j =40; j<=width;  j=j+50 )
+  {
+    plinkos.push(new Plinko(j, 475))
+  }
 
 }
 
@@ -62,10 +64,6 @@ function draw() {
   for(var k= 0; k<divisions.length; k++){
     divisions[k].display()
   }
-
- 
-
-
   
   for (var j=0 ; j< particles.length; j++){
     particles[j].display();
