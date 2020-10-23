@@ -73,6 +73,7 @@ function draw() {
 }
 
 function touchStarted(){
+  if(touches[0]){
   console.log(touches)
-  particles.push(new Particle(touches[0][0],touches[0][1], 10))
+  particles.push(new Particle(touches[0].x,touches[0].y, 10))}
 }
