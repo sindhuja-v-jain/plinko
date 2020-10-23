@@ -73,7 +73,7 @@ function draw() {
 }
 
 function touchStarted(){
-  if(touches[0]){
+  if(touches[0]&& touches[0].y<75){
   console.log(touches)
   particles.push(new Particle(touches[0].x,touches[0].y, 10))}
 }
