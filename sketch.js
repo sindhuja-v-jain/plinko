@@ -12,7 +12,7 @@ function setup() {
   engine = Engine.create()
   world = engine.world;
   ground = new Ground(width/2 , height-10 , width , 10)
-  divisionHeight=height/3+50;
+  divisionHeight=height/3+25;
   for ( var k= 0; k<=width; k=k+width/6){
     divisions.push(new Ground(k, height-divisionHeight/2-15,10, divisionHeight))
   }
