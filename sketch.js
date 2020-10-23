@@ -54,3 +54,17 @@ function touchStarted(){
   console.log(touches)
   particles.push(new Particle(touches[0].x,touches[0].y, 10))}
 }
+function touchMoved(){
+  if(touches[0]&& touches[0].y<75){
+  console.log(touches)
+  particles.push(new Particle(touches[0].x,touches[0].y, 10))}
+}
+
+function mouseDragged(){
+  if(mouseY< 75)
+  particles.push(new Particle(mouseX,mouseY, 10))
+}
+function mouseClicked(){
+  if(mouseY< 75)
+  particles.push(new Particle(mouseX,mouseY, 10))
+}
