@@ -31,6 +31,10 @@ function setup() {
 
 function draw() {
   background(0);  
+   textSize(20)
+  noStroke(255)
+  fill(255)
+  text("<---- click here ---->", width/2-100 ,20 )
   Engine.update(engine)
   ground.display();
   for(var j= 0 ; j< plinkos.length; j++){
